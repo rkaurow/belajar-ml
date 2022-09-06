@@ -11,8 +11,9 @@
         2. python -v
 ### steps kolaborasi:
     1. fork repository
-    2. git clone https://github.com/labkoding/belajar-ml.git
-    3. cd belajar-ml
-    4. code . (aplikasi vscode akan terbuka)
-    5. buka terminal dari dalam vscode
-    6. ketik py lalu enter
+    2. buka terminal atau cmd
+    3. ketik: git clone https://github.com/labkoding/belajar-ml.git
+    4. ketik: cd belajar-ml
+    5. ketik: code . (aplikasi vscode akan terbuka)
+    6. buka terminal dari dalam vscode
+    7. ketik py atau python lalu enter

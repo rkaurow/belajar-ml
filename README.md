@@ -25,3 +25,4 @@
     5. ketik: git push origin master
 
 ### pertemuan tanggal 13 september 2022
+ contoh

@@ -23,3 +23,5 @@
     3. ketik: git add *
     4. ketik: git commit -am "hanya print hello world"
     5. ketik: git push origin master
+
+### pertemuan tanggal 13 september 2022

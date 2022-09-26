@@ -1,6 +1,6 @@
-from flask import flask
-app = flask(__name__)
+from flask import Flask
+app = Flask(__name__)
 
 @app.route("/")
-def agung_lawendatu():
-    return"<p>agung, lawendatu!</p>
+def hello_world():
+    return "<p>agung lawendatu!</p>"

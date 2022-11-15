@@ -1,33 +1,18 @@
 from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
 
+# Create a new chat bot named Charlie
+chatbot = ChatBot('Charlie')
 
-# Uncomment the following lines to enable verbose logging
-# import logging
-# logging.basicConfig(level=logging.INFO)
+trainer = ListTrainer(chatbot)
 
-# Create a new instance of a ChatBot
-bot = ChatBot(
-    'Terminal',
-    storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    logic_adapters=[
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.BestMatch'
-    ],
-    database_uri='sqlite:///database.db'
-)
+trainer.train([
+    "Hi, can I help you?",
+    "Sure, I'd like to book a flight to Iceland.",
+    "Your flight has been booked."
+])
 
-print('Type something to begin...')
+# Get a response to the input text 'I would like to book a flight.'
+response = chatbot.get_response('I would like to book a flight.')
 
-# The following loop will execute each time the user enters input
-while True:
-    try:
-        user_input = input()
-
-        bot_response = bot.get_response(user_input)
-
-        print(bot_response)
-
-    # Press ctrl-c or ctrl-d on the keyboard to exit
-    except (KeyboardInterrupt, EOFError, SystemExit):
-        break
+print(response)
